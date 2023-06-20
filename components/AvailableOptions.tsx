@@ -1,7 +1,6 @@
 "use client"; // This is a client component 👈🏽
 
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 
 interface Option {
   site: {
