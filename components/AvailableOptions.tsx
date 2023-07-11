@@ -11,6 +11,7 @@ interface Option {
   time: string;
   slots_available: number;
   price: string;
+  num_holes: number;
 }
 
 interface AvailableOptionsProps {
@@ -106,6 +107,12 @@ const AvailableOptions: React.FC<AvailableOptionsProps> = () => {
         {filteredOptions.map((option, index) => (
           <li key={index} className="py-4">
             <div className="flex items-center">
+              <div className="w-1/2">
+                <h2 className="text-lg font-semibold">
+                  {option.site.name} - {option.date} - {option.time}
+                </h2>
+                <p className="text-gray-600">Price: {option.price}</p>
+              </div>
               <div className="w-1/2">
                 <h2 className="text-lg font-semibold">
                   {option.site.name} - {option.date} - {option.time}
